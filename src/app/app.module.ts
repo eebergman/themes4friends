@@ -9,6 +9,7 @@ import {
   MatGridListModule,
   MatCardModule,
   MatMenuModule,
+  MatCheckboxModule,
   MatIconModule,
   MatButtonModule,
   MatToolbarModule,
@@ -17,14 +18,25 @@ import {
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ButtonsComponent } from './components/cards/buttons/buttons.component';
+import { ToolbarsComponent } from './components/cards/toolbars/toolbars.component';
+import { CheckboxesComponent } from './components/cards/checkboxes/checkboxes.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    NavbarComponent,
+    ButtonsComponent,
+    ToolbarsComponent,
+    CheckboxesComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatGridListModule,
+    MatCheckboxModule,
     MatCardModule,
     MatMenuModule,
     MatIconModule,

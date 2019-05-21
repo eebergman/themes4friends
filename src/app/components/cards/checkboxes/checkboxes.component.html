@@ -1,0 +1,60 @@
+<mat-grid-list cols="2" rowHeight="300px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          Checkboxes
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-subtitle class="dashboard-card-content">
+        Checkboxes - Basic
+      </mat-card-subtitle>
+      <mat-card-content class="dashboard-card-content">
+        <mat-checkbox class="example-margin" checked="true">
+          Checked
+        </mat-checkbox>
+        <mat-checkbox class="example-margin">
+          Not Checked
+        </mat-checkbox>
+        <mat-checkbox class="example-margin" indeterminate="true">
+          Indeterminate
+        </mat-checkbox>
+      </mat-card-content>
+
+      <mat-card-subtitle class="dashboard-card-content">
+        Checkboxes - Primary
+      </mat-card-subtitle>
+      <mat-card-content class="dashboard-card-content">
+        <mat-checkbox color="primary" class="example-margin" checked="true">
+          Checked
+        </mat-checkbox>
+        <mat-checkbox color="primary" class="example-margin">
+          Not Checked
+        </mat-checkbox>
+        <mat-checkbox
+          color="primary"
+          class="example-margin"
+          indeterminate="true"
+        >
+          Indeterminate
+        </mat-checkbox>
+      </mat-card-content>
+
+      <mat-card-subtitle class="dashboard-card-content">
+        Checkboxes - Disabled
+      </mat-card-subtitle>
+      <mat-card-content class="dashboard-card-content">
+        <mat-checkbox class="example-margin" checked="true" disabled>
+          Checked
+        </mat-checkbox>
+        <mat-checkbox class="example-margin" disabled>
+          Not Checked
+        </mat-checkbox>
+        <mat-checkbox class="example-margin" indeterminate="true" disabled>
+          Indeterminate
+        </mat-checkbox>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
