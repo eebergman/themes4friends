@@ -1,0 +1,55 @@
+<mat-grid-list class="form-fields" cols="1" rowHeight="300px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-card class="dashboard-card mat-elevation-z8">
+      <mat-card-header>
+        <mat-card-title>
+          Form Fields
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-subtitle class="dashboard-card-content">
+        Select
+      </mat-card-subtitle>
+      <mat-card-content class="dashboard-card-content">
+        <form>
+          <mat-form-field
+            id="user-searchby-dropdown"
+            class="search-by"
+            appearance="outline"
+          >
+            <mat-label>Primary</mat-label>
+            <mat-select [disableOptionCentering]="true">
+              <mat-option>First</mat-option>
+              <mat-option>Second</mat-option>
+            </mat-select>
+          </mat-form-field>
+          &nbsp;
+          <mat-form-field
+            id="user-searchby-dropdown"
+            class="search-by"
+            appearance="outline"
+            color="accent"
+          >
+            <mat-label>Accent</mat-label>
+            <mat-select [disableOptionCentering]="true">
+              <mat-option>First</mat-option>
+              <mat-option>Second</mat-option>
+            </mat-select>
+          </mat-form-field>
+          &nbsp;
+          <mat-form-field
+            id="user-searchby-dropdown"
+            class="search-by"
+            appearance="outline"
+          >
+            <mat-label>Disabled</mat-label>
+            <mat-select disabled [disableOptionCentering]="true">
+              <mat-option>First</mat-option>
+              <mat-option>Second</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

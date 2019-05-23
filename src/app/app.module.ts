@@ -10,17 +10,23 @@ import {
   MatCardModule,
   MatMenuModule,
   MatCheckboxModule,
+  MatSelectModule,
   MatIconModule,
   MatButtonModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatTooltipModule
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ButtonsComponent } from './components/cards/buttons/buttons.component';
 import { ToolbarsComponent } from './components/cards/toolbars/toolbars.component';
 import { CheckboxesComponent } from './components/cards/checkboxes/checkboxes.component';
+import { FormFieldsComponent } from './components/cards/form-fields/form-fields.component';
+import { ThemePickerComponent } from './components/theme-picker/theme-picker.component';
+import { ThemeStorageService } from './components/theme-picker/theme-storage/theme-storage.service';
+import { StyleManagerService } from './components/theme-picker/style-manager/style-manager.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,9 @@ import { CheckboxesComponent } from './components/cards/checkboxes/checkboxes.co
     NavbarComponent,
     ButtonsComponent,
     ToolbarsComponent,
-    CheckboxesComponent
+    CheckboxesComponent,
+    FormFieldsComponent,
+    ThemePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +45,7 @@ import { CheckboxesComponent } from './components/cards/checkboxes/checkboxes.co
     AppRoutingModule,
     MatGridListModule,
     MatCheckboxModule,
+    MatSelectModule,
     MatCardModule,
     MatMenuModule,
     MatIconModule,
@@ -44,9 +53,10 @@ import { CheckboxesComponent } from './components/cards/checkboxes/checkboxes.co
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [ThemeStorageService, StyleManagerService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
