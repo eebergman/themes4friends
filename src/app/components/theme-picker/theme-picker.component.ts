@@ -119,6 +119,6 @@ export class ThemePickerComponent implements OnInit, OnDestroy {
   ],
   exports: [ThemePickerComponent],
   declarations: [ThemePickerComponent],
-  providers: [StyleManagerService, ThemeStorageService]
+  providers: [StyleManagerService]
 })
 export class ThemePickerModule {}
