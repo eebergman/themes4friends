@@ -1,6 +1,12 @@
-import { Component, OnDestroy, OnInit, NgModule } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  OnDestroy,
+  OnInit,
+  NgModule,
+  ViewEncapsulation
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,11 +20,14 @@ import {
   SiteTheme
 } from './theme-storage/theme-storage.service';
 import { StyleManagerService } from './style-manager/style-manager.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'the-theme-picker',
   templateUrl: './theme-picker.component.html',
-  styleUrls: ['./theme-picker.component.scss']
+  styleUrls: ['./theme-picker.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class ThemePickerComponent implements OnInit, OnDestroy {
   private _queryParamSubscription = Subscription.EMPTY;
@@ -98,3 +107,18 @@ export class ThemePickerComponent implements OnInit, OnDestroy {
     }
   }
 }
+
+@NgModule({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatTooltipModule
+  ],
+  exports: [ThemePickerComponent],
+  declarations: [ThemePickerComponent],
+  providers: [StyleManagerService, ThemeStorageService]
+})
+export class ThemePickerModule {}
