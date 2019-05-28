@@ -25,6 +25,7 @@ import { ToolbarsComponent } from './components/cards/toolbars/toolbars.componen
 import { CheckboxesComponent } from './components/cards/checkboxes/checkboxes.component';
 import { FormFieldsComponent } from './components/cards/form-fields/form-fields.component';
 import { ThemePickerModule } from './components/theme-picker/theme-picker.component';
+import { ThemeStorageService } from './components/theme-picker/theme-storage/theme-storage.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { ThemePickerModule } from './components/theme-picker/theme-picker.compon
     MatTooltipModule,
     ThemePickerModule
   ],
-  providers: [],
+  providers: [ThemeStorageService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

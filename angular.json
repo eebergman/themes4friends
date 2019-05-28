@@ -39,7 +39,7 @@
                 "input": "src/main.scss"
               },
               {
-                "input": "/src/assets/custom-themes/pink-bluegrey.scss",
+                "input": "src/assets/pink-bluegrey.css",
                 "lazy": true,
                 "bundleName": "pink-bluegrey"
               },
